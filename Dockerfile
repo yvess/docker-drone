@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Yves Serrano <y@yas.ch>
 
 RUN apt-get update -yq && apt-get install -yq \
+        make \
         curl && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN curl -sSL https://get.docker.com/ubuntu/ | sudo sh
