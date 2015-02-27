@@ -4,6 +4,8 @@ MAINTAINER Yves Serrano <y@yas.ch>
 RUN apt-get update -yq && apt-get install -yq \
         apparmor \
         make \
+        fontconfig-config fonts-dejavu-core libfontconfig1 libfreetype6 \
+        libjpeg-turbo8 libjpeg8 \
         curl && \
     curl -sSL https://get.docker.com/ubuntu/ | sudo sh && \
     curl -sL https://deb.nodesource.com/setup | sudo bash - && \
@@ -13,4 +15,4 @@ RUN apt-get update -yq && apt-get install -yq \
     npm install dalek-cli -g && \
     npm install dalekjs --save-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-ADD files /root/
+ADD files /root/files
