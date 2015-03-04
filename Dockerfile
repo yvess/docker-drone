@@ -2,6 +2,10 @@ FROM ubuntu:14.04
 MAINTAINER Yves Serrano <y@yas.ch>
 
 RUN apt-get update -yq && apt-get install -yq \
+        apt-transport-https \
+        ca-certificates \
+        lxc \
+        iptables \
         apparmor \
         make \
         fontconfig-config fonts-dejavu-core libfontconfig1 libfreetype6 \
