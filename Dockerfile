@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Yves Serrano <y@yas.ch>
 
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -yq && apt-get install -yq \
         apt-transport-https \
         ca-certificates \
@@ -13,4 +14,3 @@ RUN apt-get update -yq && apt-get install -yq \
     curl -L https://github.com/docker/compose/releases/download/1.3.3/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-ADD files /root/files
