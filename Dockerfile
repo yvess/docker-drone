@@ -8,7 +8,7 @@ RUN apt-get update -yq && apt-get install -yq \
         apparmor \
         make \
         curl && \
-    curl -sSL https://get.docker.com/ | sh
+    curl -sSL https://get.docker.com/ | sh && \
     curl -L https://raw.githubusercontent.com/jpetazzo/dind/master/wrapdocker > /usr/local/bin/wrapdocker; chmod +x /usr/local/bin/wrapdocker && \
     curl -L https://github.com/docker/compose/releases/download/1.3.3/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose && \
